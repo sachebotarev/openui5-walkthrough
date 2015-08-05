@@ -1,4 +1,4 @@
-module.exports = function(grunt, config) {
+module.exports = function(grunt, config, port) {
     return {
         darwin: {
             path: "http://<%= serve.host %>:<%= serve.port %>",

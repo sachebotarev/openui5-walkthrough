@@ -4,7 +4,7 @@ module.exports =  function(grunt, config) {
             options: {
                 resources: {
                     cwd: '<%= dir.webapp %>',
-                    prefix: 'sciener/mobile'
+                    prefix: '<%= project.prefix %>'
                 },
                 dest: '<%= dir.dist %>'
 

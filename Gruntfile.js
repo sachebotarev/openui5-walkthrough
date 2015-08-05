@@ -7,6 +7,9 @@ module.exports = function(grunt) {
 
 
     var gruntData = {
+        project: {
+            prefix: "sciener/mobile"
+        },
         dir: {
             bower_components: 'bower_components',
             webapp: 'webapp',
