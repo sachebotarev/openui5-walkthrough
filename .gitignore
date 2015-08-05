@@ -1,0 +1,16 @@
+# IDE service directories
+.idea/
+
+# Build directories
+dist/
+
+# bower packeges
+bower_components/
+
+#npm packeges
+node_modules/
+
+# mac os x
+.DS_Store
+*~
+
