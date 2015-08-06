@@ -1,11 +1,13 @@
-module.exports = {
-    webapp: {
-        options: {
-            livereload: true
-        },
-        files: [
-            "<%= dir.webapp %>/**"
-        ],
-        tasks: ["eslint"]
+module.exports = function(grunt, config){
+    return {
+        src: {
+            options: {
+                livereload: true
+            },
+            files: [
+                "<%= dir.src %>/**"
+            ],
+            tasks : ["eslint"]
+        }
     }
 };

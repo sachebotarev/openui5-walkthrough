@@ -1,16 +1,16 @@
 module.exports =  function(grunt, config) {
     return {
-        webapp: {
+        src: {
             options: {
-                port: '<%= serve.dev_port %>',
-                hostname: '<%= serve.host %>'
+                port: "<%= serve.src_port %>",
+                hostname: "<%= serve.host %>"
             }
         },
 
         dist: {
             options: {
-                port: '<%= serve.prod_port %>',
-                hostname: '<%= serve.host %>',
+                port: "<%= serve.dist_port %>",
+                hostname: "<%= serve.host %>",
                 keepalive: true
             }
         }

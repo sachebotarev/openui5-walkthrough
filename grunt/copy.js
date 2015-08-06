@@ -3,12 +3,12 @@ module.exports = function(grunt, config) {
         dist: {
             files: [ {
                 expand: true,
-                cwd: '<%= dir.webapp %>/',
+                cwd: "<%= dir.src %>",
                 src: [
                     '**',
                     '!test/**'
                 ],
-                dest: '<%= dir.dist %>/'
+                dest: "<%= dir.dist %>"
             } ]
         }
     }

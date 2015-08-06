@@ -12,13 +12,13 @@ module.exports = function(grunt) {
         },
         dir: {
             bower_components: 'bower_components',
-            webapp: 'webapp',
+            src: 'webapp',
             dist: 'dist'
         },
         serve: {
-            host: 'localhost',
-            dev_port: '8080',
-            prod_port: '8090'
+            host: '127.0.0.1',
+            src_port: '8080',
+            dist_port: '8090'
         }
     };
 

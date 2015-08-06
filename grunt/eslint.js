@@ -1,5 +1,5 @@
 module.exports =  function(grunt, config) {
     return {
-        webapp: ['<%= dir.webapp %>']
+        src: "<%= dir.src %>"
     }
 };

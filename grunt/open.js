@@ -1,18 +1,32 @@
-module.exports = function(grunt, config, port) {
+module.exports = function(grunt, config) {
+    var GetChromeName = function(){
+        var chrome;
+        switch (process.platform){
+            case 'win32':
+                chrome = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe";
+                break;
+            case 'darwin':
+                chrome = 'Google Chrome';
+                break;
+            default:
+                chrome = 'Google Chrome';
+        }
+        return chrome;
+    };
     return {
-        darwin: {
-            path: "http://<%= serve.host %>:<%= serve.port %>",
+        src: {
+            path: '<%= serve.host %>:<%= serve.src_port %>',
             options: {
-                delay: 500
+                delay: 5
             },
-            app: 'Google Chrome'
+            app: GetChromeName()
         },
-        win32: {
-            path: "http://<%= serve.host %>:<%= serve.port %>",
+        dist: {
+            path: '<%= serve.host %>:<%= serve.dist_port %>',
             options: {
                 delay: 500
             },
-            app: 'chrome'
+            app: GetChromeName()
         }
     }
 };

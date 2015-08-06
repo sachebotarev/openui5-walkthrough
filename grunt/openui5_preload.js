@@ -3,11 +3,10 @@ module.exports =  function(grunt, config) {
         component: {
             options: {
                 resources: {
-                    cwd: '<%= dir.webapp %>',
-                    prefix: '<%= project.prefix %>'
+                    cwd: "<%= dir.src %>",
+                    prefix: "<%= project.prefix %>"
                 },
-                dest: '<%= dir.dist %>'
-
+                dest:  "<%= dir.dist %>"
             },
             components: true,
             compress: true
