@@ -1,21 +1,16 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
-    "sap/ui/model/json/JSONModel"
-], function (Controller, MessageToast, JSONModel) {
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/resource/ResourceModel"
+], function (Controller, MessageToast, JSONModel,ResourceModel) {
     "use strict";
     return Controller.extend("sap.ui.demo.wt.controller.App", {
-        onInit: function(){
-            var oData = {
-                recipient : {
-                    name : "World"
-                }
-            };
-            var oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
-        },
         onShowHello : function() {
-            MessageToast.show("Hello World");
+            var oBundle = this.getView().getModel("i18n").getResourceBundle();
+            var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+            var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+            MessageToast.show(sMsg);
         }
     });
 });
